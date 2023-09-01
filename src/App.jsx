@@ -1,8 +1,11 @@
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
+import MainLayout from "./MainLayout";
 
 function App() {
-  return <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />;
+  return (
+    <>
+      <MainLayout />
+    </>
+  );
 }
 
 export default App;
