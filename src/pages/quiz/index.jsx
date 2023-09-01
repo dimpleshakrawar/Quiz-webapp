@@ -13,6 +13,7 @@ import Button from "../../components/common/button";
 const QuizLayout = () => {
   const dispatch = useDispatch();
   const Navigate = useNavigate();
+  const [countdown, setCountdown] = useState(180);
   const [loading, setLoading] = useState(false);
   const allMcqData = useSelector((state) => state.items.data);
   const counter = useSelector((state) => state.number.count);
@@ -80,6 +81,19 @@ const QuizLayout = () => {
   }, [createMcq]);
 
   useEffect(() => {
+    if (countdown > 0) {
+      const timer = setInterval(() => {
+        setCountdown((prevCountdown) => prevCountdown - 1);
+      }, 1000);
+
+      return () => clearInterval(timer);
+    } else {
+      dispatch(setIsSubmitted(true));
+      Navigate("/report");
+    }
+  }, [countdown, setIsSubmitted]);
+
+  useEffect(() => {
     fetchMcqApi();
   }, [fetchMcqApi]);
 
@@ -97,6 +111,7 @@ const QuizLayout = () => {
         transition={{ duration: 0.5, delay: 0.25 }}
         className=" bg-green h-100vh p-10 "
       >
+        <p className="font-bold text-lg">Time Remaining : {countdown} second</p>
         <div className=" relative flex flex-col mx-auto bg-white rounded-lg max-w-2xl p-6 mb-8">
           <p className="text-red ">
             {allMcqData[counter]?.visited ? "Viewed" : ""}
@@ -106,11 +121,6 @@ const QuizLayout = () => {
             {decodeString(allMcqData[counter]?.question)}
           </h2>
           <hr />
-          {/* <div
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
-          > */}
           <QuizForm
             options={allMcqData[counter]?.options}
             mcq={allMcqData[counter]}

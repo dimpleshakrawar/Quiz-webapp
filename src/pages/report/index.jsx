@@ -8,6 +8,7 @@ const ReportLayout = () => {
   const allMcqData = useSelector((state) => state.items.data);
   const Navigate = useNavigate();
   const allQuestions = Object.values(allMcqData);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
