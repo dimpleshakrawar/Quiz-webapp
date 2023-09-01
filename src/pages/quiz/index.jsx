@@ -106,11 +106,6 @@ const QuizLayout = () => {
             {decodeString(allMcqData[counter]?.question)}
           </h2>
           <hr />
-          {/* <div
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
-          > */}
           <QuizForm
             options={allMcqData[counter]?.options}
             mcq={allMcqData[counter]}
@@ -134,11 +129,6 @@ const QuizLayout = () => {
               disabled={counter >= 14}
             />
           </div>
-        </div>
-        <div className="flex justify-center items-center gap-1">
-          <Button label="1" background={"white"} color={"green"} />
-          <Button label="2" background={"white"} color={"green"} />
-          <Button label="3" background={"white"} color={"green"} />
         </div>
       </motion.div>
     )
