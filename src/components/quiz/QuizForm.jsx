@@ -5,7 +5,7 @@ const QuizForm = ({ options, mcq, handleSelect, counter, handleSubmit }) => {
     <div className="flex flex-col gap-5 py-8 mb-12 h-60">
       {options?.map((option, key) => (
         <div key={key} className="flex items-center align-end gap-8">
-          <label className="radio flex items-center gap-3 px-6 text-xl">
+          <label className="radio flex items-center gap-3 px-6 md:text-xl">
             <input
               className="w-4 h-4"
               type="radio"

@@ -20,9 +20,9 @@ const HomeLayout = () => {
 
   return (
     <div className="h-1/2 ">
-      <div className=" relative flex flex-col grow justify-center items-center mx-auto bg-green rounded-lg mt-16 max-w-2xl p-6 ">
+      <div className=" relative flex flex-col grow justify-center items-center mx-auto bg-green rounded-lg md:mt-16 max-w-2xl p-6 ">
         <div className="mb-2 flex justify-center items-center ">
-          <h1 className="text-4xl p-10 text-textGreen font-bold">
+          <h1 className="text-4xl max-sm:p-6 md:p-10 text-textGreen font-bold">
             Test your Quiz Skill here!!{" "}
           </h1>
         </div>
@@ -32,7 +32,7 @@ const HomeLayout = () => {
           </h1>
         </div>
         <div
-          className="bg-lightGreen p-5 rounded-lg w-2/3 "
+          className="bg-lightGreen p-5 rounded-lg md:w-2/3 "
           onSubmit={submitHandler}
         >
           <div className="mb-20 ">
@@ -48,15 +48,15 @@ const HomeLayout = () => {
           <div className="flex justify-center items-center">
             <button
               type="submit"
-              onClick={submitHandler}
               className="w-1/3 p-2 text-textGreen bg-white font-bold rounded"
+              onClick={submitHandler}
             >
               Start Quiz
             </button>
           </div>
         </div>
-        <p className="text-textGreen font-bold">
-          Time Limit is 30 minutes! Enjoy
+        <p className="font-bold text-center">
+          Time limit is 30 seconds. Enjoy!
         </p>
       </div>
     </div>
