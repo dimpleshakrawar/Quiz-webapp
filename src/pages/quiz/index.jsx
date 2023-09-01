@@ -111,7 +111,9 @@ const QuizLayout = () => {
         transition={{ duration: 0.5, delay: 0.25 }}
         className=" bg-green h-100vh p-10 "
       >
-        <p className="font-bold text-lg">Time Remaining : {countdown} second</p>
+        <p className="font-bold text-lg text-center">
+          Time Remaining : {countdown} sec
+        </p>
         <div className=" relative flex flex-col mx-auto bg-white rounded-lg max-w-2xl p-6 mb-8">
           <p className="text-red ">
             {allMcqData[counter]?.visited ? "Viewed" : ""}

@@ -31,7 +31,7 @@ const HomeLayout = () => {
             Get started with your Email address
           </h1>
         </div>
-        <form
+        <div
           className="bg-lightGreen p-5 rounded-lg w-2/3 "
           onSubmit={submitHandler}
         >
@@ -53,7 +53,10 @@ const HomeLayout = () => {
               Start Quiz
             </button>
           </div>
-        </form>
+        </div>
+        <p className="text-textGreen font-bold">
+          Time Limit is 30 minutes! Enjoy
+        </p>
       </div>
     </div>
   );
