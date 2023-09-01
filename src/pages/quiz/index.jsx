@@ -145,11 +145,6 @@ const QuizLayout = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center items-center gap-1">
-          <Button label="1" background={"white"} color={"green"} />
-          <Button label="2" background={"white"} color={"green"} />
-          <Button label="3" background={"white"} color={"green"} />
-        </div>
       </motion.div>
     )
   );
