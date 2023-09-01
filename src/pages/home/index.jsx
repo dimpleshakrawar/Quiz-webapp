@@ -49,6 +49,7 @@ const HomeLayout = () => {
             <button
               type="submit"
               className="w-1/3 p-2 text-textGreen bg-white font-bold rounded"
+              onClick={submitHandler}
             >
               Start Quiz
             </button>
