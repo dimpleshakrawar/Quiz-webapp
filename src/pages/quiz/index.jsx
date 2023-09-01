@@ -109,7 +109,7 @@ const QuizLayout = () => {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5, delay: 0.25 }}
-        className=" bg-green h-100vh p-10 "
+        className=" bg-green h-100vh md:p-10 "
       >
         <p className="font-bold text-lg">Time Remaining : {countdown} second</p>
         <div className=" relative flex flex-col mx-auto bg-white rounded-lg max-w-2xl p-6 mb-8">
@@ -117,7 +117,7 @@ const QuizLayout = () => {
             {allMcqData[counter]?.visited ? "Viewed" : ""}
           </p>
 
-          <h2 className="text-2xl p-10 text-textGreen font-medium h-48">
+          <h2 className="md:text-2xl md:p-10 text-textGreen font-medium h-40">
             {decodeString(allMcqData[counter]?.question)}
           </h2>
           <hr />
