@@ -48,6 +48,7 @@ const HomeLayout = () => {
           <div className="flex justify-center items-center">
             <button
               type="submit"
+              onClick={submitHandler}
               className="w-1/3 p-2 text-textGreen bg-white font-bold rounded"
             >
               Start Quiz
