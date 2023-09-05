@@ -44,3 +44,5 @@ Currently, two official plugins are available:
    Deployed on Viceral, the link provided is -
 
 --> run npm i for all the required installation and npm run dev to run the code
+
+--> Hosted link - quiz-webapp-sigma.vercel.app
