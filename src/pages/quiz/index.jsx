@@ -13,7 +13,7 @@ import Button from "../../components/common/button";
 const QuizLayout = () => {
   const dispatch = useDispatch();
   const Navigate = useNavigate();
-  const [countdown, setCountdown] = useState(180);
+  const [countdown, setCountdown] = useState(1800);
   const [loading, setLoading] = useState(false);
   const allMcqData = useSelector((state) => state.items.data);
   const counter = useSelector((state) => state.number.count);
@@ -80,6 +80,9 @@ const QuizLayout = () => {
     }
   }, [createMcq]);
 
+  let minutes = Math.floor(countdown / 60);
+  let seconds = countdown - minutes * 60;
+
   useEffect(() => {
     if (countdown > 0) {
       const timer = setInterval(() => {
@@ -112,7 +115,7 @@ const QuizLayout = () => {
         className=" bg-green h-100vh md:p-10 "
       >
         <p className="font-bold text-lg text-center">
-          Time Remaining : {countdown} sec
+          Time Remaining : {minutes} min {seconds} sec
         </p>
         <div className=" relative flex flex-col mx-auto bg-white rounded-lg max-w-2xl p-6 mb-8">
           <p className="text-red ">
