@@ -112,17 +112,17 @@ const QuizLayout = () => {
         initial="hidden"
         animate="visible"
         transition={{ duration: 0.5, delay: 0.25 }}
-        className=" bg-green h-100vh md:p-10 "
+        className=" bg-lightBlue h-100vh md:p-10 "
       >
         <p className="font-bold text-lg text-center">
           Time Remaining : {minutes} min {seconds} sec
         </p>
-        <div className=" relative flex flex-col mx-auto bg-white rounded-lg max-w-2xl p-6 mb-8">
+        <div className=" relative flex flex-col mx-auto bg-white rounded-lg max-w-[33rem] p-2 mb-8">
           <p className="text-red ">
             {allMcqData[counter]?.visited ? "Viewed" : ""}
           </p>
 
-          <h2 className="md:text-2xl md:p-10 text-textGreen font-medium h-40">
+          <h2 className="md:text-xl md:p-4 text-textGreen font-medium h-28">
             {decodeString(allMcqData[counter]?.question)}
           </h2>
           <hr />
@@ -136,14 +136,14 @@ const QuizLayout = () => {
           <div className="flex justify-between">
             <Button
               label="Prev"
-              background={"green"}
+              background={"blue"}
               color={"white"}
               disabled={counter <= 0}
               onClick={() => nextBtnHandler("prev")}
             />
             <Button
               label="Next"
-              background={"green"}
+              background={"blue"}
               color={"white"}
               onClick={() => nextBtnHandler("next")}
               disabled={counter >= 14}

@@ -4,7 +4,7 @@ import decodeString from "../../utils/decodeString";
 const QuesAnsLayout = ({ header, allQuestionsObj, correctAnswer }) => {
   return (
     <div className="bg-white p-4 rounded sm:w-screen ">
-      <p className="bg-green text-white p-2 w-2/3 text-2xl mb-4">{header}</p>
+      <p className="bg-blue text-white p-2 w-2/3 text-2xl mb-4">{header}</p>
       <div className="p-4">
         {allQuestionsObj?.map((question, key) => (
           <div key={key} className="mb-4">

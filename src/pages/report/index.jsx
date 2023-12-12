@@ -15,7 +15,7 @@ const ReportLayout = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="flex gap-2 flex-col bg-green p-4 "
+      className="flex gap-2 flex-col bg-lightBlue p-4 "
     >
       <div className="flex gap-4 max-sm:flex-col ">
         <QuesAnsLayout
